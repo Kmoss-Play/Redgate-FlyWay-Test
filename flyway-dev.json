@@ -1,0 +1,25 @@
+{
+  "version": "2.0",
+  "id": "fb475594-bf97-4fba-9fb9-41972961f051",
+  "name": "Northwind",
+  "databaseType": "SqlServer",
+  "development": {
+    "scriptsFolder": "./schema-model"
+  },
+  "deployment": {
+    "generateUndoScripts": true,
+    "flywayConfFiles": [
+      "./flyway.conf"
+    ],
+    "targetDatabases": [
+      {
+        "schemas": [],
+        "displayName": "Prod",
+        "connectionProvider": {
+          "type": "UsernamePassword",
+          "url": "jdbc:sqlserver://localhost;databaseName=northwind;encrypt=true;integratedSecurity=true;trustServerCertificate=true"
+        }
+      }
+    ]
+  }
+}
