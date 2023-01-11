@@ -10,6 +10,10 @@ CREATE PROCEDURE [dbo].[GetCategories]
 -- WITH ENCRYPTION, RECOMPILE, EXECUTE AS CALLER|SELF|OWNER| 'user_name'
 AS
 BEGIN
-    SELECT * FROM dbo.Categories
+    SELECT CategoryID ,
+           CategoryName ,
+           Description ,
+           Picture ,
+           date FROM dbo.Categories
 END
 GO
